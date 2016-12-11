@@ -1,0 +1,53 @@
+<div class="container ow" ng-controller="Menu as m">
+    <div class="col-lg-12 col-sm-12">
+        <h1 align="center">Меню раздельного питания</h1>
+    </div>
+    <div class="col-lg-4 col-sm-4 width_div_col_l">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog margin-icon" aria-hidden="true"></span>Действия <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href=""><span class="glyphicon glyphicon-plus margin-icon" aria-hidden="true"></span>Добавить</a></li>
+                                <li><a href=""><span class="glyphicon glyphicon-minus margin-icon" aria-hidden="true"></span>Удалить</a></li>
+                                <li><a href=""><span class="glyphicon glyphicon-pencil margin-icon" aria-hidden="true"></span>Редактировать</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href=""><span class="glyphicon glyphicon-sort margin-icon" aria-hidden="true"></span>Сортировка</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href=""><span class="glyphicon glyphicon-filter margin-icon" aria-hidden="true"></span>Фильтр</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <button type="submit" class="btn btn-success">Сохранить</button>
+        <button type="default" class="btn btn-success">Отмена</button>
+    </div>
+    <div class="col-lg-4 col-sm-4  margin_leftawidth" >
+        <table class="table table-bordered th-center">
+            <thead>
+                <tr class="active tr_ht">
+                    <th class="td_one">
+                        <br>Продукт</th>
+                    <th>
+                        <br>Совместимось</th>
+                    <th>
+                        <br>Выбрать</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in m.selectedMeal.menulist">
+                    <td><span ng-bind="row.name"></span></td>
+                    <td><span ng-bind="row.description"></span></td>
+                    <td ng-class="m.stylealign"><input type="checkbox" ng-model="row.ck"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-4 col-sm-4  margin_leftawidth">
+    <div><h4 ng-bind="m.selectedMeal.name" style="font-weight: bold;"></h4><br>
+    <span ng-bind="m.selectedMeal.description"></span></div>
+</div>
