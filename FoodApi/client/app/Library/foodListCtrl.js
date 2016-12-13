@@ -10,9 +10,6 @@
         fd.foodList = [];
         fd.foodListTwo = [];
 
-
-
-
         fd.isViewEditing = false;
         fd.editedFood = null;
 
@@ -45,7 +42,17 @@
                 fd.data = responce.data;
                 console.log(responce);
                 console.log(fd.data);
+
+                for (var i = 0; i < fd.data.length; i++) {
+                    var cur = fd.data[i];
+                    if (cur.id == $routeParams.idFood) {
+
+                        fd.selectedFood = cur;
+                        break;
+                    }
+                }
             });
+            
             /*
             fd.data = [{
 
@@ -93,14 +100,7 @@
 
             ];*/
 
-            for (var i = 0; i < fd.data.length; i++) {
-                var cur = fd.data[i];
-                if (cur.id == $routeParams.idFood) {
-
-                    fd.selectedFood = cur;
-                    break;
-                }
-            }
+            
         }
 
         function add() {

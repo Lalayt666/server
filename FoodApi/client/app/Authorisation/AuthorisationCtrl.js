@@ -15,14 +15,7 @@
         vm.curId=null; 
 
 
-         function showName() {
-        	console.log('kkk');
-
-            if (vm.name.length == 0) {
-                return false;
-            }
-            return true;
-        }
+       
         init();
 
 
@@ -33,7 +26,14 @@
 
         }
 
+        function showName() {
+            console.log('kkk');
 
+            if (vm.name.length == 0) {
+                return false;
+            }
+            return true;
+        }
       
 
 

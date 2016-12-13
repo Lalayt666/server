@@ -34,9 +34,31 @@ namespace FoodWebApi.Controllers
                 new Items { id = 1, name = "Дыня", kkal = 100.0, checkk = false},
                 new Items { id = 2, name = "Хлеб", kkal = 200.0, checkk = false},
                 new Items { id = 3, name = "Морковь", kkal = 150.0, checkk = false}
-                } 
+                },
+
+ 
             
             },
+
+            new Food {
+                id = 3, 
+                imagePath = "client/content/image/3.png", 
+                items = new Items[]
+                {
+                new Items { id = 1, name = "Оливки", kkal = 230.0, checkk = false},
+                new Items { id = 2, name = "Творожек", kkal = 700.0, checkk = false},
+                new Items { id = 3, name = "Яблоко", kkal = 15.0, checkk = false}
+                } },
+
+                new Food {
+                id = 4, 
+                imagePath = "client/content/image/4.png", 
+                items = new Items[]
+                {
+                new Items { id = 1, name = "Капуста", kkal = 90.0, checkk = false},
+                new Items { id = 2, name = "Огурец", kkal = 800.0, checkk = false},
+                new Items { id = 3, name = "Картофель", kkal = 400.0, checkk = false}
+                } }
             
             
             };

@@ -5,16 +5,16 @@ angular.module("super_food", ["ngMessages","ngRoute"]).config(
             controller: 'FoodController'
         });
         
-        $routeProvider.when('/avtoriz', {
-            templateUrl: 'client/app/Vika/vika.html',
+        $routeProvider.when('/home', {
+            templateUrl: 'client/app/Home/home.html',
           
         });
         $routeProvider.when('/menu/:idMeal', {
-            templateUrl: 'client/app/Valya/valya.html',
+            templateUrl: 'client/app/Menu/menu.html',
             controller: 'Menu'
         });
         $routeProvider.otherwise({
-            redirectTo: '/avtoriz'
+            redirectTo: '/home'
         });
 
         

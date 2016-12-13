@@ -109,8 +109,9 @@ border-width: 2px;  */
     color:black;
 }
 .nav_text_color{
-    color:black; 
-    padding:10px;
+    color:black;
+    padding:10px; 
+    
 }
 .modal_content{
     padding:15px;
